@@ -68,7 +68,7 @@ Once connected, we start to list the files in the home directory and we are able
 cat user.txt
 ```
 
-First flag : `81c22bcb1aedd6dc8c8c712790e60e25`
+**First flag** : `81c22bcb1aedd6dc8c8c712790e60e25`
 
 ### Finding the second flag
 
@@ -87,6 +87,8 @@ Let's checkout if the version of `/usr/local/bin/sudo` is vulnerable to any expl
 It is ! As we can see on exploit-db, the version `1.9.17` of `sudo` is vulnerable to a local privilege escalation.
 
 ![alt text](image-7.png)
+
+[Exploit link](https://www.exploit-db.com/exploits/52352)
 
 We can now use the exploit to escalate our privileges to root.
 
@@ -146,4 +148,4 @@ Finally, we can find the second flag by reading the `root.txt` file.
 cat /root/root.txt
 ```
 
-The second flag : `2940ccc21b6eb677d669704346f4507d`
+**Second flag** : `2940ccc21b6eb677d669704346f4507d`
