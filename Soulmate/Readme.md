@@ -129,3 +129,21 @@ That's it, we can now connect to the target using ssh with the credentials and f
 ![alt text](image-13.png)
 
 **First flag** : `3910dd53b3c4f9a6fdb0c66764b9584e`
+
+### Finding the second flag
+
+After analyzing the previous script, I realized that it is used to start a local ssh shell that allows us to run erlang commands. This means that ben has reused the same password in both remote shell and local shell that is why I could connect to the target remotely.
+
+Now, to start the erlang shell, we can run this command :
+
+```bash
+ssh ben@localhost -p 2222
+```
+
+We now have root privileges and we can read the second flag.
+
+```erl
+os:cmd("cat /root/root.txt").
+```
+
+**Second flag** : `0cf47db448da259841280f9c5b50b411`
