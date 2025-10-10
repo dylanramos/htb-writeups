@@ -2,6 +2,7 @@
 
 - Link : https://app.hackthebox.com/machines/Expressway
 - Release date : 20.09.2025
+- OS : Linux
 - Difficulty : Easy
 - Points : 20
 
