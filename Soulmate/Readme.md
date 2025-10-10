@@ -30,7 +30,7 @@ When browsing to the web page, we get redirected to `http://soulmate.htb`. To ac
 
 ![alt text](image-1.png)
 
-After some tests, I found out that the website is not vulnerable. So I decided to run a dns brute-force using `ffuf` to see if there are some subdomains
+After some tests, I found out that the website is not vulnerable. So I decided to run a dns brute-force using `ffuf` to see if there are some subdomains :
 
 ```bash
 ffuf -u http://10.10.11.86 -H "Host: FUZZ.soulmate.htb" -w /usr/share/wordlists/dirb/small.txt -fw 4
@@ -88,7 +88,7 @@ We now have to find a vulnerability on this machine to escalate our privileges. 
 wget https://github.com/peass-ng/PEASS-ng/releases/latest/download/linpeas.sh
 ```
 
-Then I started a python http server to transfer the file to the target.
+Then I started a python http server (in the directory where the file is located) to transfer the file to the target.
 
 ```bash
 python3 -m http.server 8000
