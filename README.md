@@ -1,4 +1,4 @@
-# HTB_Writeups
+# HTB Writeups
 
 ## Table of Contents
 
